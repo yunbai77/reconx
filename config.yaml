@@ -1,0 +1,35 @@
+general:
+  project_name: "reconx"
+  output_dir: "results"
+  log_level: "INFO"
+  log_file: "reconx.log"
+
+network:
+  timeout: 10
+  retries: 2
+  delay_min: 0.5
+  delay_max: 1.5
+  rate_limit: 10
+  concurrency: 5
+  proxies: []
+  proxy_rotate: false
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15"
+    - "Mozilla/5.0 (X11; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0"
+
+modules:
+  subdomain: true
+  dns: true
+  portscan: true
+  httpprobe: true
+
+portscan:
+  ports: "common"
+  scan_type: "connect"
+  randomize: true
+
+http:
+  follow_redirects: true
+  verify_tls: false
+  max_body_size: 65536
