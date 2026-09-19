@@ -20,7 +20,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<你的用户名>/reconx.git
+git clone https://github.com/yunbai77/reconx.git
 cd reconx
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
